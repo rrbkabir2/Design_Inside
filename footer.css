@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: "worksans-semibold", "work sans", "sans-serif"; */
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.foot{
+    width: 100%;
+    padding: 50px;
+    background-color: #847539;
+}
+
+.footLogo{
+    display: inline-block;
+}
+
+.foot2{
+    color: #fffeed;
+    height: 150px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footMenus{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.footMenus a{
+    color: #fffeed;
+    text-decoration: none;
+}
+.footMenus a:visited{
+    color: #fffeed;
+}
+.footMenus a:hover{
+    text-decoration: underline;
+}
+
+.address{
+    height: 100%;
+    width: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.addTitle, .socialHead, .inquire span{
+    color: #243939;
+    font-weight: 600;
+}
+
+.addressInfo{
+    width: 230px;
+}
+
+.socials{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.socials a{
+    color: #fffeed;
+    text-decoration: none;
+}
+
+.socials:visited{
+    text-decoration: none;
+    color: #fffeed;
+}
+
+.socials a:hover{
+    text-decoration: underline;
+}
+
+.inquire{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+}
+
+.credit{
+    width: 100%;
+    height: 60px;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================= FOOTER RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .foot2 {
+        height: auto;
+        gap: 30px;
+    }
+
+    .address {
+        width: 220px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .foot {
+        padding: 40px 25px;
+    }
+
+    .foot2 {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 35px;
+    }
+
+    .footMenus,
+    .address,
+    .socials,
+    .inquire {
+        height: auto;
+        justify-content: center;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .addressInfo{
+        align-self: center;
+    }
+
+    .address {
+        width: 100%;
+    }
+
+    .credit {
+        height: auto;
+        padding: 12px;
+        text-align: center;
+        font-size: 14px;
+    }
+}

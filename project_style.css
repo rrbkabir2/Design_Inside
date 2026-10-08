@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: "worksans-semibold", "work sans", "sans-serif"; */
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fffeed;
+}
+
+section{
+    margin-top: 50px;
+}
+
+.projectHead{
+    font-weight: 600;
+    padding-left: 50px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.projectTitle{
+    padding-left: 50px;
+    margin-bottom: 50px;
+    font-weight: 100;
+    font-size: 45px;
+}
+
+.projectGallary{
+    width: 90vw;
+    margin: auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:27px;
+}
+
+.img{
+    width: 49%;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.img:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.img1{
+    background-image: url(Assets/Images/Gallary_1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img2{
+    background-image: url(Assets/Images/Gallary_2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img3{
+    background-image: url(Assets/Images/Gallary_3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img4{
+    background-image: url(Assets/Images/Gallary_4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img5{
+    background-image: url(Assets/Images/Gallary_5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img6{
+    background-image: url(Assets/Images/Gallary_6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img7{
+    background-image: url(Assets/Images/Gallary_7.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img8{
+    background-image: url(Assets/Images/Gallary_8.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img9{
+    background-image: url(Assets/Images/Gallary_9.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img10{
+    background-image: url(Assets/Images/Gallary_10.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* ================= PROJECTS GALLERY RESPONSIVE (ALL SCREENS) ================= */
+
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .projectHead,
+    .projectTitle {
+        padding-left: 30px;
+    }
+
+    .projectTitle {
+        font-size: 36px;
+    }
+
+    .img {
+        height: 360px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .projectHead,
+    .projectTitle {
+        padding-left: 20px;
+    }
+
+    .projectTitle {
+        font-size: 26px;
+        margin-bottom: 35px;
+    }
+
+    .projectGallary {
+        width: 95vw;
+        gap: 20px;
+    }
+
+    .img {
+        width: 100%;
+        height: 260px;
+    }
+
+    /* Disable hover zoom on touch */
+    .img:hover {
+        transform: none;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .img {
+        height: 220px;
+    }
+}

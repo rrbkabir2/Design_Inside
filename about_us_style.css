@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: "worksans-semibold", "work sans", "sans-serif"; */
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fffeed;
+}
+
+.frame2{
+    height: 100vh;
+    width: 99vw;
+    margin-top: 18px;
+    background-color: #fffeed;
+    overflow: hidden;
+    display: flex;
+}
+
+.part1{
+    box-sizing: border-box;
+    height: 100%;
+    width: 50vw;
+    padding: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+}
+
+.aboutHead{
+    align-self: flex-start;
+    font-size: 16px;
+}
+
+.aboutInfo{
+    font-weight: 100;
+    font-size: 45px;
+    align-self: flex-start;
+}
+
+.subAboutInfo{
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.part2{
+    height: 100%;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutImage{
+    height: 80%;
+    width: 80%;
+    border-radius: 10px;
+    background-image: url(Assets/Images/About_us_image.jpg);
+    background-size: cover;
+}
+
+.frame3{
+    padding: 0px 50px;
+    padding-bottom: 50px;
+    padding-top: 80px;
+    background-color: #d6cead;
+}
+
+.serviceCards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: nowrap;
+}
+
+.card{
+    color: #fffeed;
+    background-color: #584e26;
+    width: 30%;
+    padding: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 50px;
+
+}
+
+.serviceName{
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.serviceInfo{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.frame4part2{
+    height: 90%;
+    width: 80%;
+    border-radius: 10px;
+    background-image: url(Assets/Images/About_us_image_2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* ================= ABOUT PAGE RESPONSIVE ================= */
+
+/* Laptop / Tablet */
+@media (max-width: 1024px) {
+    .frame2 {
+        height: auto;
+        padding: 0px 0;
+    }
+
+    .part1 {
+        padding: 80px;
+        width: 50%;
+    }
+
+    .part2 {
+        width: 50%;
+    }
+
+    .aboutInfo {
+        font-size: 36px;
+    }
+
+    .subAboutInfo {
+        font-size: 16px;
+    }
+
+    .serviceCards {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 45%;
+        padding: 40px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .frame2 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .part1,
+    .part2 {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .aboutInfo {
+        font-size: 26px;
+    }
+
+    .subAboutInfo {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .aboutImage,
+    .frame4part2 {
+        width: 100%;
+        height: 300px;
+    }
+
+    .frame3 {
+        padding: 50px 25px;
+    }
+
+    .serviceCards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .serviceInfo {
+        font-size: 16px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .aboutInfo {
+        font-size: 22px;
+    }
+
+    .aboutImage,
+    .frame4part2 {
+        height: 240px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+}

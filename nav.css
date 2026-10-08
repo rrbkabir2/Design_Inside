@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: "worksans-semibold", "work sans", "sans-serif"; */
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+nav{
+    color: white;
+    height: 100px;
+    padding: 0px 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 11px 5px rgb(0 0 0 / 50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    height: 80px;
+    width: 150px;
+    background-image: url(Assets/Images/Logo.png);
+    background-size: 115%;
+    background-position-x: center;
+    background-position-y: 45%;
+}
+
+.menus{
+    color: rgba(255, 255, 255, 0.7);
+    height: 80px;
+    width: 615px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submenus{
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+.submenus:visited{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.underline:hover{
+    text-decoration: underline;
+}
+
+.butt svg{
+    padding-left: 5px;
+    padding-bottom: 5px;
+    transform: rotate(45deg);
+    
+}
+
+.butt{
+    /* background-color: #847539; */
+    color: white;
+    background-color: #004d4d;
+    width: 180px;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.butt:hover{
+    transition: all 1s ease;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.butt:hover svg{
+    padding-bottom: 0px;
+    transform: rotate(360deg);
+    transition: transform 0.5s ease;
+}
+
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .menus {
+        width: auto;
+        gap: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    nav {
+        overflow: visible;
+        position: relative;
+        padding: 20px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menus {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        gap: 22px;
+        padding: 30px 0;
+        display: none;
+    }
+
+    .menus.active {
+        display: flex;
+    }
+
+    .butt {
+        width: 130%;
+    }
+}
