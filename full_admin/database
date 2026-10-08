@@ -1,0 +1,70 @@
+##CREATE DATABASE
+CREATE DATABASE Design_inside;
+
+##admin login Table
+CREATE TABLE Admins(username VARCHAR(50) NOT NULL UNIQUE  ,email VARCHAR(100) NOT NULL UNIQUE, password VARCHAR(20) NOT NULL, security_question VARCHAR(255) NOT NULL, security_answer VARCHAR(255) NOT NULL, PRIMARY KEY(email));
+
+#admin login table insert value
+INSERT INTO Admins (username, email, password, security_question, security_answer) VALUES
+('admin1', 'admin1@example.com', 'password123', 'Your favorite color?', 'Blue'),
+('admin2', 'admin2@example.com', 'password456', 'Your first pet name?', 'Tommy'),
+('admin3', 'admin3@example.com', 'password789', 'Your birth city?', 'Mumbai');
+
+##customer table
+CREATE TABLE Customer (
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    phone_num VARCHAR(10) NOT NULL,
+    phone_num2 VARCHAR(10),
+    address TEXT,
+    price_range BIGINT,
+    start_date DATE,
+    place VARCHAR(200),
+    service VARCHAR(255) NOT NULL,
+    message TEXT,
+    status_c VARCHAR(50) DEFAULT 'not selected',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(email)
+);
+
+#customer table insert value
+INSERT INTO Customer 
+(name, email, phone_num, phone_num2, address, price_range, start_date, place, service, message, status_c) 
+VALUES
+('Kabir Bundele', 'kabir1@example.com', '9876543210', '9123456780', '123, MG Road, Pune, Maharashtra', 350000, '2026-01-30', 'Pune', 'Full Service', 'Initial consultation.', 'not selected'),
+('Amit Sharma', 'amit2@example.com', '9876512345', '9123476543', '45, FC Road, Pune, Maharashtra', 500000, '2026-02-10', 'Pune', 'Design Consultation', 'Follow-up required.', 'selected'),
+('Neha Gupta', 'neha3@example.com', '9988776655', '9876655443', '78, Park Street, Kolkata, West Bengal', 450000, '2026-03-15', 'Kolkata', 'Interior Decoration', 'Client prefers modern style.', 'not selected'),
+('Rohan Mehta', 'rohan4@example.com', '9123456789', '9988771122', '12, Brigade Road, Bangalore, Karnataka', 600000, '2026-04-01', 'Bangalore', 'Full Renovation', 'Needs quick turnaround.', 'selected'),
+('Priya Singh', 'priya5@example.com', '9871234567', '9876541230', '56, Connaught Place, Delhi', 300000, '2026-01-20', 'Delhi', 'Painting Service', 'Minimalistic theme.', 'not selected'),
+('Vikram Joshi', 'vikram6@example.com', '9123678901', '9123456781', '34, Marine Drive, Mumbai, Maharashtra', 750000, '2026-05-05', 'Mumbai', 'Luxury Interior', 'High-end materials.', 'selected'),
+('Anjali Rao', 'anjali7@example.com', '9876540987', '9876540321', '90, Banjara Hills, Hyderabad, Telangana', 400000, '2026-02-28', 'Hyderabad', 'Modular Kitchen', 'Modern kitchen design.', 'not selected'),
+('Siddharth Verma', 'siddharth8@example.com', '9988001122', '9988001133', '23, Sector 18, Noida, Uttar Pradesh', 550000, '2026-03-22', 'Noida', 'Living Room', 'Client prefers contemporary.', 'selected'),
+('Tanya Kapoor', 'tanya9@example.com', '9879001234', '9879005678', '78, Salt Lake City, Kolkata, West Bengal', 350000, '2026-01-15', 'Kolkata', 'Bedroom', 'Comfortable design.', 'not selected'),
+('Manish Kumar', 'manish10@example.com', '9123009876', '9123009875', '45, MG Marg, Jaipur, Rajasthan', 650000, '2026-04-10', 'Jaipur', 'Full Renovation', 'Client wants vibrant colors.', 'selected'),
+('Riya Patel', 'riya11@example.com', '9988774433', '9988774455', '56, SG Highway, Ahmedabad, Gujarat', 480000, '2026-03-05', 'Ahmedabad', 'Home Office', 'Needs functional layout.', 'not selected'),
+('Kabir Khan', 'kabir12@example.com', '9876654321', '9876654332', '12, Brigade Road, Bangalore, Karnataka', 520000, '2026-04-20', 'Bangalore', 'Living & Dining', 'Client prefers bright theme.', 'selected');
+
+##completed table
+CREATE TABLE Compro (
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone_num VARCHAR(10) NOT NULL UNIQUE,
+    phone_num2 VARCHAR(10),
+    address TEXT NOT NULL,
+    Profit_price DECIMAL(12,2),
+    start_date DATE,
+    ending_date DATE,
+    place VARCHAR(200),
+    service VARCHAR(255) NOT NULL,
+    message TEXT,
+    comp_pro_price DECIMAL(12,2),
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (email)
+);
+
+#completed table insert value
+INSERT INTO Compro (name, email, phone_num, phone_num2, address, Profit_price, start_date, ending_date, place, service, message, comp_pro_price) VALUES
+('John Doe', 'john@example.com', 9876543210, 9123456780, '123 Street, New York', 15000.00, '2025-11-25', '2025-12-05', 'New York', 'Interior Design', 'Completed modern design project.', 50000.00),
+('Jane Smith', 'jane@example.com', 8765432109, NULL, '456 Avenue, Los Angeles', 20000.00, '2025-12-01', '2025-12-15', 'Los Angeles', 'Renovation', 'Full home renovation completed.', 75000.00),
+('Alex Johnson', 'alex@example.com', 7654321098, 7987654321, '789 Boulevard, Chicago', 10000.00, '2025-12-05', '2025-12-12', 'Chicago', 'Office Design', 'Small office setup completed.', 30000.00);
+
