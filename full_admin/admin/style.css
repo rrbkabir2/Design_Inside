@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+    color: white;
+    height: 100px;
+    padding: 0px 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 5px 11px 5px rgb(0 0 0 / 50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    height: 80px;
+    width: 150px;
+    background-image: url(/Assets/Images/Logo.png);
+    background-size: 115%;
+    background-position-x: center;
+    background-position-y: 45%;
+}
+
+.menus{
+    color: rgba(255, 255, 255, 0.7);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.submenus{
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+.submenus:visited{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.underline:hover{
+    text-decoration: underline;
+}
+
+.butt{
+    color: white;
+    background-color: #004d4d;
+    width: 180px;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.butt:hover{
+    color: black;
+    background-color: white;
+}
+
+.butt svg{
+    padding-left: 5px;
+    padding-bottom: 5px;
+    transform: rotate(45deg);
+}
+
+.butt:hover svg{
+    padding-bottom: 0px;
+    transform: rotate(360deg);
+    transition: transform 0.5s ease;
+}
